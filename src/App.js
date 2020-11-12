@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleAppleCountChange = this.handleAppleCountChange.bind(this);
+    this.handleAppleCountChange = this.handleAppleCountChange.bind(this); //refactor by removing unnecessary line of code, cross reference with handleOrangeChange
     this.toggleAppleOffer = this.toggleAppleOffer.bind(this);
     this.toggleOrangeOffer = this.toggleOrangeOffer.bind(this);
     this.checkout = this.checkout.bind(this);
