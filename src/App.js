@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+// Fixes issues #1 and #2
 import Customer from "./components/customer";
 import Store from "./components/store";
 
