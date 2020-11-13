@@ -1,4 +1,96 @@
-.App {
+@media only screen and (max-width: 1000px) {
+  .container > .store {
+    margin: auto;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    display: block;
+    align-items: center;
+    width: 90%;
+    height: 40vh;
+    text-align: center;
+  }
+
+  .store .containerLabel {
+    margin: auto;
+    display: block;
+    text-transform: uppercase;
+    width: 100%;
+    height: 10vh;
+  }
+
+  div > .activateApple,
+  div > .activateOrange {
+    margin: auto;
+    margin-top: 5vh;
+    background-color: #29801c;
+    color: white;
+    width: 80vw;
+    font-size: large;
+    border-radius: 1vw;
+  }
+  /* vertical seperator */
+  .container > .vertical-seperator {
+    display: none;
+  }
+  /* Customer */
+  div.container > .customer {
+    /* margin: auto; */
+    margin-top: 0vh;
+    align-items: center;
+    display: block;
+    align-items: center;
+    width: 90%;
+    height: 55vh;
+    background-color: white;
+    text-align: center;
+  }
+  .customer .containerLabel {
+    margin: auto;
+    display: block;
+    text-transform: uppercase;
+    width: 100%;
+    height: 10vh;
+  }
+  .container > .customer > ul {
+    /* padding-top: 10vh; */
+    padding-left: 0vh;
+    text-align: left;
+    list-style-type: none;
+  }
+
+  .customer > ul > li {
+    margin-top: 1vh;
+  }
+
+  .customer > ul > li > span {
+    margin-left: 10vw;
+    margin-right: 40vw;
+    display: inline-block;
+    width: 30%;
+  }
+
+  .bill {
+    margin: auto;
+    margin-top: 3vh;
+    font-size: 25px;
+    font-weight: 500;
+    width: 90%;
+  }
+
+  .customer .checkout {
+    margin-top: 5vh;
+    padding: 2vh 8vw;
+    background-color: #29801c;
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+    width: 90%;
+    border: 0;
+    border-radius: 1vw;
+  }
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,7 +127,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 /*  */
 * {
@@ -95,6 +187,10 @@
   cursor: pointer;
 }
 
+.activateApple:hover,
+.activateOrange:hover {
+  background-color: #1b5712;
+}
 .customer {
   margin: auto;
   margin-top: 20vh;
@@ -110,7 +206,8 @@
 
 .customer > ul {
   /* padding-top: 10vh; */
-  padding-left: 10vh;
+  padding-left: 10vw;
+  padding-bottom: 5vh;
   text-align: left;
   list-style-type: none;
 }
@@ -137,4 +234,9 @@
   color: white;
   font-weight: 100;
   font-size: calc(20px);
+  border: 0;
+  cursor: pointer;
+}
+.checkout:hover {
+  background-color: #1b5712;
 }

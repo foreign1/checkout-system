@@ -30,7 +30,7 @@ class Customer extends Component {
         <span className="containerLabel">Customer</span>
         <ul>
           <li>
-            <span>Apple - </span>
+            <span>Apple </span>
             <input
               type="number"
               value={this.props.cart.Apple}
@@ -39,7 +39,7 @@ class Customer extends Component {
             />
           </li>
           <li>
-            <span>Orange - </span>
+            <span>Orange </span>
             <input
               type="number"
               value={this.props.cart.Orange}
