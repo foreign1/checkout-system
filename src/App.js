@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-// Fixes issues #1 and #2
 import Customer from "./components/customer";
 import Store from "./components/store";
 
@@ -40,17 +39,23 @@ class App extends React.Component {
     });
 
   handleAppleCountChange = (appleCount) => {
-    this.setState({
-      ...this.state,
-      cart: { Apple: parseInt(appleCount), Orange: this.state.cart.Orange },
-    });
+    this.setState(
+      {
+        ...this.state,
+        cart: { Apple: appleCount, Orange: this.state.cart.Orange },
+      },
+      () => this.generateCartArray()
+    );
   };
 
   handleOrangeChange = (orangeCount) => {
-    this.setState({
-      ...this.state,
-      cart: { Apple: this.state.cart.Apple, Orange: orangeCount },
-    });
+    this.setState(
+      {
+        ...this.state,
+        cart: { Apple: this.state.cart.Apple, Orange: orangeCount },
+      },
+      () => this.generateCartArray()
+    );
   };
 
   generateCartArray = () => {
@@ -66,7 +71,6 @@ class App extends React.Component {
   };
 
   async checkout() {
-    this.generateCartArray();
     // POST request using fetch with async/await
     const requestOptions = {
       method: "POST",
@@ -77,7 +81,8 @@ class App extends React.Component {
       }),
     };
     const response = await fetch(
-      "https://my-checkout-app-backend.herokuapp.com/api/v1/checkout/",
+      //"https://my-checkout-app-backend.herokuapp.com/api/v1/checkout/"
+      "http://127.0.0.1:5000/api/v1/checkout/",
       requestOptions
     );
     const data = await response.json();
