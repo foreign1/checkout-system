@@ -30,22 +30,26 @@ class Customer extends Component {
         <span className="containerLabel">Customer</span>
         <ul>
           <li>
-            <span>Apple </span>
-            <input
-              type="number"
-              value={this.props.cart.Apple}
-              id="appleCount"
-              onChange={this.handleAppleCountChange}
-            />
+            <label className="label">
+              Apple
+              <input
+                type="number"
+                value={this.props.cart.Apple}
+                id="appleCount"
+                onChange={this.handleAppleCountChange}
+              />
+            </label>
           </li>
           <li>
-            <span>Orange </span>
-            <input
-              type="number"
-              value={this.props.cart.Orange}
-              id="orangeCount"
-              onChange={this.handleOrangeChange}
-            />
+            <label className="label">
+              Orange
+              <input
+                type="number"
+                value={this.props.cart.Orange}
+                id="orangeCount"
+                onChange={this.handleOrangeChange}
+              />
+            </label>
           </li>
         </ul>
         <div className="bill">Total = {this.props.bill}</div>

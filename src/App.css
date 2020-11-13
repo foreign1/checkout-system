@@ -62,11 +62,15 @@
     margin-top: 1vh;
   }
 
-  .customer > ul > li > span {
+  .customer > ul > li > .label {
     margin-left: 10vw;
-    margin-right: 40vw;
-    display: inline-block;
-    width: 30%;
+    display: block;
+    width: 80%;
+  }
+  .customer > ul > li > label > input {
+    width: 40px;
+    height: 25px;
+    float: right;
   }
 
   .bill {
@@ -216,17 +220,16 @@
   margin-top: 5vh;
 }
 
-.customer > ul > li > span {
+.customer > ul > li > label {
+  margin-left: 0;
   display: inline-block;
-  width: 12vw;
+  width: 60%;
 }
-
-.customer > ul > li > input {
-  width: 30px;
-  height: 20px;
-  margin-left: 5vw;
+.customer > ul > li > label > input {
+  width: 40px;
+  height: 25px;
+  float: right;
 }
-
 .checkout {
   margin-top: 10vh;
   padding: 2vh 8vw;
