@@ -81,10 +81,18 @@ class App extends React.Component {
       requestOptions
     );
     const data = await response.json();
-    this.setState({ bill: parseFloat(data).toFixed(2) }, () => (
+    this.setState({ bill: this.denominate(data) }, () => (
       <customer bill={this.state.bill} />
     ));
   }
+
+  denominate = (data) => {
+    data = parseFloat(data).toFixed(2);
+    if (data > 1) {
+      return `${data}$`;
+    }
+    return `${data}c`;
+  };
 
   render() {
     return (
