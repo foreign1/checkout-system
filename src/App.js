@@ -77,7 +77,7 @@ class App extends React.Component {
       }),
     };
     const response = await fetch(
-      "http://my-checkout-app.herokuapp.com/checkout/",
+      "https://my-checkout-app-backend.herokuapp.com/api/v1/checkout/",
       requestOptions
     );
     const data = await response.json();
